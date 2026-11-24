@@ -34,3 +34,11 @@ This project was assigned by my college. I developed the application with some a
 **Uzair Ishafq**
 
 GitHub: [@Uzairishafq](https://github.com/Uzairishafq)
+
+## 📸 Screenshots
+
+### Calculator Home Screen
+![Calculator Home](calculator-home.png)
+
+### Scientific Calculator
+![Scientific Calculator](scientific-panel.png)
