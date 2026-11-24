@@ -1,0 +1,157 @@
+# Ensure build layout
+# Check configuration tokens
+# Preparing build
+# Check requirements for android
+# Search for Git (git)
+#  -> found at /usr/bin/git
+# Search for Cython (cython)
+#  -> found at /home/dell/venv_p4a_develop/bin/cython
+# Search for Java compiler (javac)
+#  -> found at /usr/bin/javac
+# Search for Java keytool (keytool)
+#  -> found at /usr/bin/keytool
+# Install platform
+# Run 'git config --get remote.origin.url' ...
+# Cwd /home/dell/AdvancedCalculator/.buildozer/android/platform/python-for-android
+https://github.com/kivy/python-for-android.git
+# Run 'git branch -vv' ...
+# Cwd /home/dell/AdvancedCalculator/.buildozer/android/platform/python-for-android
+* develop 9562d1b4 [origin/develop] Merge pull request #3406 from AndreMiras/fix/macos-echo-stripping
+# Run '/home/dell/venv_p4a_develop/bin/python -m pip install -q appdirs colorama>=0.3.3 jinja2 sh>=2, <3.0; sys_platform!="win32" meson ninja build toml packaging setuptools wheel>=0.43,<0.49' ...
+# Cwd None
+# Apache ANT found at /home/dell/.buildozer/android/platform/apache-ant-1.9.4
+# Android SDK found at /home/dell/.buildozer/android/platform/android-sdk
+# Recommended android's NDK version by p4a is: 28c
+# Android NDK found at /home/dell/.buildozer/android/platform/android-ndk-r29
+# Run '/home/dell/venv_p4a_develop/bin/python -m pythonforandroid.toolchain aab -h --color=always --storage-dir=/home/dell/AdvancedCalculator/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a --ndk-api=24 --ignore-setup-py --debug' ...
+# Cwd /home/dell/AdvancedCalculator/.buildozer/android/platform/python-for-android
+# Check application requirements
+# Compile platform
+# Run '/home/dell/venv_p4a_develop/bin/python -m pythonforandroid.toolchain create --dist_name=advancedcalculator --bootstrap=sdl2 --requirements=python3,kivy --arch=arm64-v8a --arch=armeabi-v7a --copy-libs --color=always --storage-dir=/home/dell/AdvancedCalculator/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a --ndk-api=24 --ignore-setup-py --debug' ...
+# Cwd /home/dell/AdvancedCalculator/.buildozer/android/platform/python-for-android
+[WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+[WARNING]: Please report any issues to the python-for-android issue tracker.
+[WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+[WARNING]: Please report any issues to the python-for-android issue tracker.
+[1m[INFO][0m:    Will compile for the following archs: arm64-v8a, armeabi-v7a
+[1m[INFO][0m:    Found Android API target in $ANDROIDAPI: 36
+[1m[INFO][0m:    Available Android APIs are (36)
+[1m[INFO][0m:    Requested API target 36 is available, continuing.
+[1m[INFO][0m:    Found NDK dir in $ANDROIDNDK: /home/dell/.buildozer/android/platform/android-ndk-r29
+[1m[INFO][0m:    Found NDK version 29
+[1m[31m[WARNING][39m[0m: Maximum recommended NDK version is 28c, but newer versions may work.
+[1m[31m[WARNING][39m[0m: Newer NDKs may not be fully supported by p4a.
+[1m[INFO][0m:    Getting NDK API version (i.e. minimum supported API) from user argument
+[1m[INFO][0m:    ccache is missing, the build will not be optimized in the future.
+[1m[90m[DEBUG][39m[0m:   All possible dists: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching name and arch: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching ndk_api and recipe: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[INFO][0m:    Of the existing distributions, the following meet the given requirements:
+[1m[INFO][0m:    	[32m[1madvancedcalculator[0m: min API 24, includes recipes ([32mhostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests[0m), built for archs ([34marm64-v8a, armeabi-v7a[0m)
+[1m[INFO][0m:    [1m[94madvancedcalculator has compatible recipes, using this one[0m
+# Build the application #2
+# Copy application source from /home/dell/AdvancedCalculator
+# Remove directory and subdirectory /home/dell/AdvancedCalculator/.buildozer/android/app
+# Create directory /home/dell/AdvancedCalculator/.buildozer/android/app
+# Copy /home/dell/AdvancedCalculator/main.py to /home/dell/AdvancedCalculator/.buildozer/android/app/main.py
+# copy /home/dell/AdvancedCalculator/.buildozer/applibs to /home/dell/AdvancedCalculator/.buildozer/android/app/_applibs
+# Copy /home/dell/venv_p4a_develop/lib/python3.14/site-packages/buildozer/sitecustomize.py to /home/dell/AdvancedCalculator/.buildozer/android/app/sitecustomize.py
+# Package the application
+# project.properties updated
+# Run '/home/dell/venv_p4a_develop/bin/python -m pythonforandroid.toolchain apk --bootstrap sdl2 --dist_name advancedcalculator --name Advanced Calculator --version 1.0.0 --package org.uzair.advancedcalculator --minsdk 24 --ndk-api 24 --private /home/dell/AdvancedCalculator/.buildozer/android/app --android-entrypoint org.kivy.android.PythonActivity --android-apptheme @android:style/Theme.NoTitleBar --orientation portrait --window --enable-androidx --copy-libs --arch arm64-v8a --arch armeabi-v7a --color=always --storage-dir=/home/dell/AdvancedCalculator/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a --ndk-api=24 --ignore-setup-py --debug' ...
+# Cwd /home/dell/AdvancedCalculator/.buildozer/android/platform/python-for-android
+[WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+[WARNING]: Please report any issues to the python-for-android issue tracker.
+[WARNING]: prerequisites.py is experimental and does not support all prerequisites yet.
+[WARNING]: Please report any issues to the python-for-android issue tracker.
+[1m[INFO][0m:    Will compile for the following archs: arm64-v8a, armeabi-v7a
+[1m[INFO][0m:    Found Android API target in $ANDROIDAPI: 36
+[1m[INFO][0m:    Available Android APIs are (36)
+[1m[INFO][0m:    Requested API target 36 is available, continuing.
+[1m[INFO][0m:    Found NDK dir in $ANDROIDNDK: /home/dell/.buildozer/android/platform/android-ndk-r29
+[1m[INFO][0m:    Found NDK version 29
+[1m[31m[WARNING][39m[0m: Maximum recommended NDK version is 28c, but newer versions may work.
+[1m[31m[WARNING][39m[0m: Newer NDKs may not be fully supported by p4a.
+[1m[INFO][0m:    Getting NDK API version (i.e. minimum supported API) from user argument
+[1m[INFO][0m:    ccache is missing, the build will not be optimized in the future.
+[1m[90m[DEBUG][39m[0m:   All possible dists: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching name and arch: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching ndk_api and recipe: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[INFO][0m:    Of the existing distributions, the following meet the given requirements:
+[1m[INFO][0m:    	[32m[1madvancedcalculator[0m: min API 24, includes recipes ([32mhostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests[0m), built for archs ([34marm64-v8a, armeabi-v7a[0m)
+[1m[INFO][0m:    [1m[94madvancedcalculator has compatible recipes, using this one[0m
+[1m[90m[DEBUG][39m[0m:   All possible dists: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching name and arch: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching ndk_api and recipe: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[INFO][0m:    Of the existing distributions, the following meet the given requirements:
+[1m[INFO][0m:    	[32m[1madvancedcalculator[0m: min API 24, includes recipes ([32mhostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests[0m), built for archs ([34marm64-v8a, armeabi-v7a[0m)
+[1m[INFO][0m:    [1m[94madvancedcalculator has compatible recipes, using this one[0m
+[1m[INFO][0m:    [36m-> directory context /home/dell/AdvancedCalculator/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/build/bootstrap_builds/sdl2[39m
+[1m[INFO][0m:    [36m<- directory context /home/dell/AdvancedCalculator/.buildozer/android/platform/python-for-android[39m
+[1m[INFO][0m:    [36m-> directory context /home/dell/AdvancedCalculator/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/dists/advancedcalculator[39m
+[1m[90m[DEBUG][39m[0m:   Remove directory and subdirectory src/main/assets
+[1m[90m[DEBUG][39m[0m:   Create directory src/main/assets
+Compiling '/home/dell/AdvancedCalculator/.buildozer/android/app/sitecustomize.py'...
+Compiling '/home/dell/AdvancedCalculator/.buildozer/android/app/main.py'...
+[1m[90m[DEBUG][39m[0m:   Remove directory and subdirectory /tmp/p4a-extra-env-x5dimunn
+[1m[90m[DEBUG][39m[0m:   Remove directory and subdirectory src/main/res
+[1m[INFO][0m:    Detected highest available build tools version to be 37.0.0
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running gradlew clean assembleDebug[0m
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	[1A[1m> Connecting to Daemon[m[22D[1B[1A> IDLE[0K[6D[1B[2A[1m<[0;1m-------------> 0% INITIALIZING [35ms][m[38D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [135ms][m[39D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [235ms][m[39D[2B[2A[1m<[0;1m-------------> 0% INITIALIZING [335ms][m[39D[1B[1m> Evaluating settings[m[21D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [434ms][m[0K[38D[1B[1m> Loading projects[m[0K[18D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [535ms][m[38D[1B[1m> root project[m[0K[14D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [635ms][m[38D[1B[1m> root project > Resolve dependencies of classpath[m[50D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [735ms][m[38D[2B[2A[1m<[0;1m-------------> 0% CONFIGURING [835ms][m[38D[2B[2A[1m<[0;1m-------------> 0% CONFIGURING [935ms][m[38D[2B[2A[1m<[0;1m-------------> 0% CONFIGURING [1s][m[0K[35D[2B[1A[1m> root project > Resolve files of configuration 'classpath'[m[59D[1B[1A[1m> root project > Resolve files of configuration 'classpath' > Resolve files of [m[79D[1B[1A[1m> root project > Resolve files of configuration 'classpath'[m[0K[59D[1B[1A[1m> root project[m[0K[14D[1B[2A[1m<[0;1m-------------> 0% CONFIGURING [2s][m[35D[2B[2A[1m<[0;32;1m=============[0;39;1m> 100% CONFIGURING [2s][m[37D[1B> IDLE[0K[6D[1B[2A[1m<[0;1m-------------> 0% EXECUTING [2s][m[0K[33D[2B[1A[1m> :clean[m[8D[1B[2A[1m<[0;32;1m=[0;39;1m------------> 9% EXECUTING [2s][m[33D[1B[1m> :javaPreCompileDebug[m[22D[1B[2A[1m<[0;32;1m=[0;39;1m------------> 14% EXECUTING [2s][m[34D[1B[1m> :generateDebugResValues[m[25D[1B[2A[1m<[0;32;1m==[0;39;1m-----------> 21% EXECUTING [3s][m[34D[1B[1m> :mergeDebugResources[m[0K[22D[1B[2A[1m<[0;32;1m===[0;39;1m----------> 26% EXECUTING [3s][m[34D[1B[1m> :parseDebugLocalResources[m[27D[1B
+[1m[90m[DEBUG][39m[0m:   	[3A[1m<[0;32;1m====[0;39;1m---------> 31% EXECUTING [3s][m[34D[2B[1m> :processDebugMainManifest[m[27D[1B[3A[1m<[0;32;1m====[0;39;1m---------> 34% EXECUTING [3s][m[34D[1B> IDLE[0K[6D[2B[3A[0K
+[1m[90m[DEBUG][39m[0m:   	[1m> Task :processDebugMainManifest[m
+[1m[90m[DEBUG][39m[0m:   	/home/dell/AdvancedCalculator/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/dists/advancedcalculator/src/main/AndroidManifest.xml:53:18-50 Warning:
+[1m[90m[DEBUG][39m[0m:   	        android:extractNativeLibs should not be specified in this source AndroidManifest.xml file. See https://d.android.com/guide/topics/manifest/application-element#extractNativeLibs for more information.
+[1m[90m[DEBUG][39m[0m:   	The AGP Upgrade Assistant can remove the attribute from the AndroidManifest.xml file and update the build file accordingly. See https://d.android.com/studio/build/agp-upgrade-assistant for more information.
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[3A[1m<[0;32;1m=====[0;39;1m--------> 39% EXECUTING [3s][m[34D[1B[1m> :mergeDebugShaders[m[20D[1B[1m> :processDebugManifestForPackage[m[33D[1B
+[1m[90m[DEBUG][39m[0m:   	[4A[1m<[0;32;1m======[0;39;1m-------> 53% EXECUTING [3s][m[34D[1B[1m> :mergeDebugJavaResource[m[0K[25D[2B[1m> :checkDebugDuplicateClasses[m[29D[1B[4A[1m<[0;32;1m========[0;39;1m-----> 65% EXECUTING [3s][m[34D[1B[1m> :mergeDebugJniLibFolders[m[26D[2B> IDLE[0K[6D[1B[4A[1m<[0;32;1m========[0;39;1m-----> 65% EXECUTING [4s][m[34D[4B[4A[1m<[0;32;1m==========[0;39;1m---> 78% EXECUTING [4s][m[34D[1B[1m> :mergeDebugNativeLibs[m[0K[23D[1B[1m> :processDebugResources > Resolve dependencies of :detachedConfiguration2[m[74D[2B[2A[1m> :processDebugResources[m[0K[24D[2B[4A[1m<[0;32;1m==========[0;39;1m---> 80% EXECUTING [4s][m[34D[1B[1m> :stripDebugDebugSymbols[m[25D[3B[4A[1m<[0;32;1m==========[0;39;1m---> 80% EXECUTING [5s][m[34D[4B[4A[1m<[0;32;1m==========[0;39;1m---> 82% EXECUTING [5s][m[34D[1B> IDLE[0K[6D[3B[4A[1m<[0;32;1m===========[0;39;1m--> 85% EXECUTING [5s][m[34D[2B[1m> :compileDebugJavaWithJavac[m[28D[2B[4A[1m<[0;32;1m===========[0;39;1m--> 85% EXECUTING [6s][m[34D[4B[4A[1m<[0;32;1m===========[0;39;1m--> 85% EXECUTING [7s][m[34D[4B[4A[0K
+[1m[90m[DEBUG][39m[0m:   	[1m> Task :compileDebugJavaWithJavac[m
+[1m[90m[DEBUG][39m[0m:   	Note: Some input files use or override a deprecated API.
+[1m[90m[DEBUG][39m[0m:   	Note: Recompile with -Xlint:deprecation for details.
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[4A[1m<[0;32;1m===========[0;39;1m--> 87% EXECUTING [7s][m[34D[1B> IDLE[6D[1B[1m> :dexBuilderDebug[m[18D[1B> IDLE[6D[1B[4A[1m<[0;32;1m===========[0;39;1m--> 87% EXECUTING [8s][m[34D[4B[4A[1m<[0;32;1m===========[0;39;1m--> 87% EXECUTING [9s][m[34D[4B[4A[1m<[0;32;1m===========[0;39;1m--> 87% EXECUTING [10s][m[35D[4B[4A[1m<[0;32;1m===========[0;39;1m--> 90% EXECUTING [10s][m[35D[2B[1m> :mergeProjectDexDebug[m[23D[2B[4A[1m<[0;32;1m============[0;39;1m-> 92% EXECUTING [10s][m[35D[2B[1m> :packageDebug[m[0K[15D[2B[4A[1m<[0;32;1m============[0;39;1m-> 92% EXECUTING [11s][m[35D[4B[4A[1m<[0;32;1m============[0;39;1m-> 92% EXECUTING [12s][m[35D[4B[4A[0K
+[1m[90m[DEBUG][39m[0m:   	[Incubating] Problems report is available at: file:///home/dell/AdvancedCalculator/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/dists/advancedcalculator/build/reports/problems/problems-report.html
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+[1m[90m[DEBUG][39m[0m:   	
+[1m[90m[DEBUG][39m[0m:   	[32;1mBUILD SUCCESSFUL[0;39m in 15s
+[1m[90m[DEBUG][39m[0m:   	34 actionable tasks: 34 executed
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[0K
+[1m[90m[DEBUG][39m[0m:   	[4A[1m<[0;32;1m=============[0;39;1m> 100% EXECUTING [12s][m[36D[1B> IDLE[6D[1B> IDLE[6D[1B> IDLE[6D[1B[4A[1m<[0;1m-------------> 0% WAITING[m[0K[26D[4B[4A[2K[1B[2K[1B[2K[1B[2K[3A[0m[?12l[?25h
+[1m[INFO][0m:    [36m<- directory context /home/dell/AdvancedCalculator/.buildozer/android/platform/python-for-android[39m
+[1m[90m[DEBUG][39m[0m:   All possible dists: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching name and arch: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[90m[DEBUG][39m[0m:   Dist matching ndk_api and recipe: [<Distribution: name advancedcalculator with recipes (hostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests)>]
+[1m[INFO][0m:    Of the existing distributions, the following meet the given requirements:
+[1m[INFO][0m:    	[32m[1madvancedcalculator[0m: min API 24, includes recipes ([32mhostpython3, jpeg, libffi, libwebp, openssl, png, sdl2_image, sdl2_mixer, sdl2_ttf, sqlite3, python3, sdl2, libthorvg, pyjnius, android, kivy, filetype, chardet, certifi, urllib3, idna, requests[0m), built for archs ([34marm64-v8a, armeabi-v7a[0m)
+[1m[INFO][0m:    [1m[94madvancedcalculator has compatible recipes, using this one[0m
+[1m[INFO][0m:    [1m[32m# Copying android package to current directory[0m[39m
+[1m[INFO][0m:    [1m[32m# Android package filename not found in build output. Guessing...[0m[39m
+[1m[INFO][0m:    [1m[32m# Found android package file: /home/dell/AdvancedCalculator/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/dists/advancedcalculator/build/outputs/apk/debug/advancedcalculator-debug.apk[0m[39m
+[1m[INFO][0m:    # Add version number to android package
+[1m[INFO][0m:    # Android package renamed to advancedcalculator-debug-1.0.0.apk
+[1m[90m[DEBUG][39m[0m:   [90m->[0m running cp /home/dell/AdvancedCalculator/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/dists/advancedcalculator/build/outputs/apk/debug/advancedcalculator-debug.apk advancedcalculator-debug-1.0.0.apk[0m
+No setup.py/pyproject.toml used, copying full private data into .apk.
+Applying Java source code patches...
+Applying patch: src/patches/SDLActivity.java.patch
+Warning: failed to apply patch (exit code 1), assuming it is already applied:  src/patches/SDLActivity.java.patch
+Applying patch: src/patches/SDLSurface.java.patch
+Warning: failed to apply patch (exit code 1), assuming it is already applied:  src/patches/SDLSurface.java.patch
+# Copy /home/dell/AdvancedCalculator/.buildozer/android/platform/build-arm64-v8a_armeabi-v7a/dists/advancedcalculator/build/outputs/apk/debug/advancedcalculator-debug.apk to /home/dell/AdvancedCalculator/bin/advancedcalculator-1.0.0-arm64-v8a_armeabi-v7a-debug.apk
+# Android packaging done!
+# APK advancedcalculator-1.0.0-arm64-v8a_armeabi-v7a-debug.apk available in the bin directory
