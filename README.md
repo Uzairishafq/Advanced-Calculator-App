@@ -38,7 +38,9 @@ GitHub: [@Uzairishafq](https://github.com/Uzairishafq)
 ## 📸 Screenshots
 
 ### Calculator Home Screen
-![Calculator Home](calculator-home.png)
+
+![Calculator Home](./calculator-home.png)
 
 ### Scientific Calculator
-![Scientific Calculator](scientific-panel.png)
+
+![Scientific Calculator](./scientific-panel.png)
